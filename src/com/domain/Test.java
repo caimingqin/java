@@ -7,4 +7,5 @@ public class Test {
 	private String name;
 	private String age;
 	private String enName;
+	private String korName;
 }
