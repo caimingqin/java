@@ -5,4 +5,5 @@ public class Test {
 	
 	private String code;
 	private String name;
+	private String age;
 }
