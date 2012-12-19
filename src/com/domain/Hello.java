@@ -6,6 +6,7 @@ public class Hello {
 	private String age;
     private String name;
     private String aaa;
+private String bbb;
 	public String getCode() {
 		return code;
 	}
@@ -13,5 +14,6 @@ public class Hello {
 		return name;
 	}
 	
+
 	
 }
