@@ -6,6 +6,13 @@ public class Hello {
 	private String age;
     private String name;
     private String aaa;
+
+
+	private String code;
+	private String age;
+    private String name;
+    private String aaa;
+
 	public String getCode() {
 		return code;
 	}
