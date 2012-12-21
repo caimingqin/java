@@ -1,6 +1,5 @@
 package com.cmq.module;
 
 public enum AppTaskType {
-	aaa, bbbb
-
+	aaa, bbbb,ccc
 }
