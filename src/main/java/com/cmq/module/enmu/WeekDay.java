@@ -1,4 +1,4 @@
-package com.cmq.module;
+package com.cmq.module.enmu;
 
 public enum WeekDay {
 	Mon("01"), Tue("02"), Wed("03"), Thu("04"), Fri("05"), Sat("06"), Sun("07");
