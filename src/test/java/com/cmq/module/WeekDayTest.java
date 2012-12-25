@@ -2,6 +2,8 @@ package com.cmq.module;
 
 import org.junit.Test;
 
+import com.cmq.module.enmu.WeekDay;
+
 
 public class WeekDayTest{
 
