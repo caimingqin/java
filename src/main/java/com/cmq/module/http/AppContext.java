@@ -20,19 +20,20 @@ import com.cmq.module.util.JsonParser;
 
 public class AppContext {
 	public static String command(String params) {
-
 		HttpClient client = new DefaultHttpClient();
 		HttpPost httpPost = new HttpPost("http://1.232.123.197:9000/komaa/commandHandler.shtml");
+		System.out.println(params);
 		try {
 			List<NameValuePair> nvps = new ArrayList<NameValuePair>();
 			nvps.add(new BasicNameValuePair("qcmd", params));
 			httpPost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
-			System.out.println("=========start");
 			HttpResponse httpResponse = client.execute(httpPost);
-			System.out.println("=========end" + httpResponse.getStatusLine().getStatusCode());
 			HttpEntity entity = httpResponse.getEntity();
+			System.out.println("===============>>>" + entity.getContent());
 			String jsonContents = JsonParser.encode(entity.getContent());
+			System.out.println(jsonContents);
 			return jsonContents;
+
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (ClientProtocolException e) {
