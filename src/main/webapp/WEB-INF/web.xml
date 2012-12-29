@@ -4,4 +4,15 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  	<servlet>
+		<servlet-name>FormServlet</servlet-name>
+		<servlet-class> com.cmq.module.servlet.FormServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FormServlet</servlet-name>
+		<url-pattern>/formServlet.shtml</url-pattern>
+	</servlet-mapping>	
 </web-app>

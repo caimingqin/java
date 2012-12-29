@@ -57,4 +57,11 @@ public class DataUtilTest {
 		params.put("requestCode", "89900");
 		System.out.println(JsonParser.encode(params));
 	}
+	@Test
+	public void hava(){
+		for(int i=0;i<100;i++){
+			System.out.println(i);
+			System.out.println(i%2);
+		}
+	}
 }
