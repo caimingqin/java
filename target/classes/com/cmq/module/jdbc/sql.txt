@@ -1,0 +1,1 @@
+insert into Week_Cale select  * from BASEDB..Week_Cale;

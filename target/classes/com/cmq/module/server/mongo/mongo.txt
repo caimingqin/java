@@ -1,0 +1,8 @@
+Æô¶¯£º
+ win mongod.exe --config mongod.cfg
+ 
+ linux mongod --config mongod.cfg
+ 
+ mongod --dbpath /home/mongodb/proup-db --logpath /home/mongodb/proup.log --port 66770
+
+ 

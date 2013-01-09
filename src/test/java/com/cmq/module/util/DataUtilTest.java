@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.junit.Test;
 
@@ -63,5 +64,15 @@ public class DataUtilTest {
 			System.out.println(i);
 			System.out.println(i%2);
 		}
+	}
+	@Test
+	public void uuid(){
+		System.out.println(UUID.randomUUID().toString());
+	}
+	
+	@Test
+	public void substring(){
+		String url="http://ppppppp/pppp/a.png";
+		System.out.println(url.substring(url.lastIndexOf("/")+1));
 	}
 }
