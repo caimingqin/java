@@ -1,5 +1,8 @@
 package com.cmq.module.util;
 
+import java.nio.charset.Charset;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -92,5 +95,13 @@ public class DataUtilTest {
 		String url="&nbcaimg«Î";
 		String replaceAll = url.replaceAll("&nbsp;", "");
 		System.out.println(replaceAll);
+	}
+	
+	@Test
+	public void md5() throws NoSuchAlgorithmException{
+		String pwd="111111";
+		MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+		byte[] digest = messageDigest.digest(pwd.getBytes());
+		System.out.println(new String(digest,Charset.defaultCharset()));
 	}
 }
