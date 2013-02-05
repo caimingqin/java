@@ -52,10 +52,20 @@ public class DataUtilTest {
 		System.out.println(beetween);
 	}
 	@Test
+	public void formatDateToString1() {
+		String pattern = "yyyyMMdd";
+		Date date1= new Date(new Long("1357430400000"));
+		String formatDateToString1 = DateUtils.formatDateToString(date1, pattern);
+		System.out.println(formatDateToString1);
+	}
+	@Test
 	public void map(){
 		Map<String, Object> params=new HashMap<String, Object>();
 		params.put("userCode", "999");
-		params.put("requestCode", "89900");
+		params.put("from", "89900");
+		params.put("date", new Date());
+		params.put("aaa", "");
+		params.put("bbb", null);
 		System.out.println(JsonParser.encode(params));
 	}
 	@Test
@@ -74,5 +84,13 @@ public class DataUtilTest {
 	public void substring(){
 		String url="http://ppppppp/pppp/a.png";
 		System.out.println(url.substring(url.lastIndexOf("/")+1));
+	}
+	
+	@Test
+	public void replace(){
+//		String url="&nbsp;caimg«Î";
+		String url="&nbcaimg«Î";
+		String replaceAll = url.replaceAll("&nbsp;", "");
+		System.out.println(replaceAll);
 	}
 }
