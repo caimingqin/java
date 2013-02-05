@@ -1,17 +1,19 @@
 package com.cmq.module.util;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+
+import sun.misc.BASE64Encoder;
 
 public class MD5Utils {
 
-	public void md5(){
+	public static String md5(String source) {
 		try {
-			MessageDigest messageDigest = MessageDigest.getInstance("md5");
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
+			MessageDigest md = MessageDigest.getInstance("md5");
+			BASE64Encoder encoder = new BASE64Encoder();
+			return encoder.encode(md.digest(source.getBytes("utf-8")));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		return null;
 	}
 }

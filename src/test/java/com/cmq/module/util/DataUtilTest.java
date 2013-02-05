@@ -1,6 +1,6 @@
 package com.cmq.module.util;
 
-import java.nio.charset.Charset;
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.UUID;
 
 import org.junit.Test;
+
+import sun.misc.BASE64Encoder;
 
 public class DataUtilTest {
 
@@ -98,10 +100,13 @@ public class DataUtilTest {
 	}
 	
 	@Test
-	public void md5() throws NoSuchAlgorithmException{
-		String pwd="111111";
-		MessageDigest messageDigest = MessageDigest.getInstance("MD5");
-		byte[] digest = messageDigest.digest(pwd.getBytes());
-		System.out.println(new String(digest,Charset.defaultCharset()));
+	public void md5() throws NoSuchAlgorithmException, UnsupportedEncodingException{
+//		String pwd="111111";
+//		MessageDigest md = MessageDigest.getInstance("MD5");
+//	
+//		BASE64Encoder encoder = new BASE64Encoder();
+//		String encode = encoder.encode(md.digest("1111111".getBytes("utf-8")));//f6goKtkwR6TW/mERyTswig==
+//		 System.out.println(encode);
+		System.out.println(MD5Utils.md5("111111"));
 	}
 }
