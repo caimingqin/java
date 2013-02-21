@@ -1,17 +1,19 @@
 package com.cmq.module.util;
 
 import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.junit.Test;
-
-import sun.misc.BASE64Encoder;
 
 public class DataUtilTest {
 
@@ -107,6 +109,26 @@ public class DataUtilTest {
 //		BASE64Encoder encoder = new BASE64Encoder();
 //		String encode = encoder.encode(md.digest("1111111".getBytes("utf-8")));//f6goKtkwR6TW/mERyTswig==
 //		 System.out.println(encode);
-		System.out.println(MD5Utils.md5("111111"));
+		System.out.println(MD5Utils.md5("DIjVZpTC+zvMQW4SLBBy6w=="));
+	}
+	@Test
+	public void md6() throws ParseException {
+		Date date = new Date();
+		DateFormat format=new SimpleDateFormat("yyyyMMdd");//86400000
+		String format2 = format.format(date);
+		Date parse = format.parse(format2);
+		System.out.println(parse.getTime());
+		
+		long time = parse.getTime()+86400000;
+		
+		Date date2 = new Date(time);
+		System.out.println(date2.getTime());
+		System.out.println(format.format(date2));
+	}
+	final private List<String> townList = new CopyOnWriteArrayList<String>();
+	@Test
+	public void copyOnWriteArrayList() {
+		this.townList.clear();
+		
 	}
 }
