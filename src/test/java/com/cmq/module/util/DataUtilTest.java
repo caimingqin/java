@@ -32,8 +32,12 @@ public class DataUtilTest {
 	public void calendar() {
 		// 1356278400000~1356364800000
 
+		System.out.println(get(new Long("1360078645829")).toLocaleString());
+		System.out.println(get(new Long("1361923200000")).toLocaleString());
+		
+		
 		System.out.println(get(new Long("1356278400000")).toLocaleString());
-		System.out.println(get(new Long("1356364800000")).toLocaleString());
+		System.out.println(get(new Long("1361980800000")).toLocaleString());
 	}
 
 	public static Date get(long times) {
