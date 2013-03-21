@@ -65,6 +65,23 @@ public class DateUtils {
 		return null;
 	}
 	
+	public static String getCurrentDay(){
+		Calendar c = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH)+1;
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		System.out.println(year+","+month+","+day);
+		String mon=""+month;
+		if(month<10){
+			mon="0"+mon;
+		}
+		String d=""+day;
+		if(day<10){
+			d="0"+day;
+		}
+		return year+mon+""+d;
+	}
+	
 	@Test
 	public void test(){
 		double a=1361458800000.0;//
@@ -76,6 +93,11 @@ public class DateUtils {
 		System.out.println(get(new Long("1361462400000")).toLocaleString());
 		
 		System.out.println(parse("20130222").getTime());
+	}
+	
+	@Test
+	public void getCurrentDayTest(){
+		System.out.println(getCurrentDay());
 	}
 
 }
