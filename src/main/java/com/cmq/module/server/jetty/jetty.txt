@@ -1,0 +1,2 @@
+../bin/jetty.sh -stop 
+../bin/jetty.sh -start
