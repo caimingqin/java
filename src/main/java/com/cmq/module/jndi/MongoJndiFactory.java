@@ -13,7 +13,7 @@ public class MongoJndiFactory implements ObjectFactory {
 	@Override
 	public Object getObjectInstance(Object obj, Name name, Context nameCtx,
 			Hashtable<?, ?> environment) throws Exception {
-		
+		//if add more paramters for mongo ,look tomcat api in web.
 		return new Mongo();
 	}
 
