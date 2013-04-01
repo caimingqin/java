@@ -90,14 +90,26 @@ public class DateUtils {
 		double c=b-a;
 		System.out.println(c);
 		System.out.println(getMils("20130222"));
-		System.out.println(get(new Long("1361462400000")).toLocaleString());
+		System.out.println(get(new Long("1364530657566")).toLocaleString());
 		
 		System.out.println(parse("20130222").getTime());
 	}
 	
 	@Test
 	public void getCurrentDayTest(){
-		System.out.println(getCurrentDay());
+//		System.out.println(get(new Long("1362067200000")).toLocaleString());
+//		System.out.println(get(new Long("1381593600000")).toLocaleString());
+//		System.out.println(get(new Long("1381420800000")).toLocaleString());
+//		System.out.println(get(new Long("1381766400000")).toLocaleString());//1381766400000
+//		System.out.println(get(new Long("1364486400000")).toLocaleString());
+//		System.out.println(getCurrentDay());
+		
+		
+		Calendar c=Calendar.getInstance();
+		c.setTimeInMillis(new Long("1381766400000"));
+		
+		Date date =c.getTime();
+		System.out.println(date.toLocaleString());
 	}
 
 }
