@@ -28,4 +28,17 @@
 		<res-auth>Container</res-auth>
 	</resource-ref>
 
+	<resource-ref>
+		<description>mongo instance</description>
+		<res-ref-name>db/mongo</res-ref-name>
+		<res-type>com.mongodb.Mongo</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<!-- in tomcat context.xml -->
+	<!-- <Resource auth="Container" driverClassName="net.sourceforge.jtds.jdbc.Driver" 
+		name="jdbc/dmsdb" username="DMSTEST" password="dmstest001" factory="org.apache.naming.factory.BeanFactory" 
+		type="org.springframework.jdbc.datasource.DriverManagerDataSource" url="jdbc:jtds:sqlserver://192.168.90.22:49191;databasename=DMSDB_Z" 
+		/> <Resource auth="Container" name="db/mongo" type="com.mongodb.Mongo" factory="com.orion.message.interfaces.mongo.MongoJndiFactory" 
+		/> -->
+
 </web-app>
