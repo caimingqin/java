@@ -1,5 +1,5 @@
 package com.cmq.module.enmu;
 
 public enum AppTaskType {
-	aaa, bbbb,ccc,ddd
+	BROADCAST,TASK,NOTIFICATION
 }
