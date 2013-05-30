@@ -30,14 +30,15 @@ public class DataUtilTest {
 
 	@Test
 	public void calendar() {
-		// 1356278400000~1356364800000
-
-		System.out.println(get(new Long("1360078645829")).toLocaleString());
-		System.out.println(get(new Long("1361923200000")).toLocaleString());
+//		10,endTime:1368720000000,start:1367856000000 
+//		acceptDate:{'$lte':1368720000000,'$gte':1367856000000}
+		
+		System.out.println(get(new Long("1368720000000")).toLocaleString());
+		System.out.println(get(new Long("1367856000000")).toLocaleString());
 		
 		
-		System.out.println(get(new Long("1356278400000")).toLocaleString());
-		System.out.println(get(new Long("1361980800000")).toLocaleString());
+//		System.out.println(get(new Long("1356278400000")).toLocaleString());
+//		System.out.println(get(new Long("1361980800000")).toLocaleString());
 	}
 
 	public static Date get(long times) {
@@ -99,8 +100,8 @@ public class DataUtilTest {
 	
 	@Test
 	public void replace(){
-//		String url="&nbsp;caimgÇë";
-		String url="&nbcaimgÇë";
+//		String url="&nbsp;caimgï¿½ï¿½";
+		String url="&nbcaimgï¿½ï¿½";
 		String replaceAll = url.replaceAll("&nbsp;", "");
 		System.out.println(replaceAll);
 	}

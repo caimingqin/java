@@ -1,8 +1,27 @@
-������
+������
  win mongod.exe --config mongod.cfg
  
  linux mongod --config mongod.cfg
  
  mongod --dbpath /home/mongodb/proup-db --logpath /home/mongodb/proup.log --port 66770
-
  
+ 
+ 
+ 数据备份
+ 
+mongodump -h 127.0.0.1：27017 -d test -o /home/mongodb-server/mongodb-2.4.3/database.back1 -v 不停止服务备份
+ 
+ 
+mongodump --dbpath /home/mongodb-server/mongodb-2.4.3/database/ -d /home/mongodb-server/mongodb-2.4.3/database20130530/ -v 停止mongodb服务备份
+
+
+mongorestore -h 127.0.0.1:27017 -d test --directoryperdb /home/mongodb-server/mongodb-2.4.3/database20130530/test/ -v 恢复数据
+
+mongorestore -h 127.0.0.1:27017 -d test --directoryperdb /home/mongodb-server/mongodb-2.4.3/database20130530/test/ -v --drop  删除原有的集合 后 恢复数据
+
+
+mongorestore -h 127.0.0.1:27017 -c order --directoryperdb /home/mongodb-server/mongodb-2.4.3/database20130530/test/ -v --drop  恢复单个集合
+ 
+ 
+ 
+ mongoreimport  mongoexport 对单个集合操作

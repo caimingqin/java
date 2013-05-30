@@ -8,8 +8,6 @@ import java.util.Date;
 
 import org.junit.Test;
 
-import sun.security.action.GetLongAction;
-
 public class DateUtils {
      
 	public static String formatDateToString(Date date, String pattern) {
