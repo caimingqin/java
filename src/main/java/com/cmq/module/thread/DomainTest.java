@@ -15,7 +15,7 @@ public class DomainTest {
 		while(i <40) {
 			i++;
 			domainEventGather.gatherDomainEvent(new DomainEvent("code" + i,
-					"name" + i));
+					"name" + i,null));
 		}
 		long currentTimeMillis = System.currentTimeMillis();
 		System.out.println("i====>>"+i);

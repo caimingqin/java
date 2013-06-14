@@ -24,4 +24,4 @@ mongorestore -h 127.0.0.1:27017 -c order --directoryperdb /home/mongodb-server/m
  
  
  
- mongoreimport  mongoexport 对单个集合操作
+ mongoimport  mongoexport 对单个集合操作
